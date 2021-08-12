@@ -1,31 +1,29 @@
 #include <iostream>
 
-
 int main () {
-  //deklarasi
-  int a;
-  std::cout << "MASUKAN NILAI" << std::endl;
+  float a, b, hasil;
+  char aritmatika;
+  std::cout << " == MASUKAN NILAI == \n \n" << std::endl;
+  std::cout << "MASUKAN NILAI PERTAMA \n" << std::endl;
   std::cin >> a;
-  switch(a) {
-    case 5:
-    std::cout << "Ini adalah lima" << std::endl;
-    break;
-    case 4:
-    std::cout << "Ini adalah empat" << std::endl;
-    break;
-    case 3:
-    std::cout << "Ini adalah tiga" << std::endl;
-    break;
-    case 2:
-    std::cout << "Ini adalah dua" << std::endl;
-    break;
-    case 1:
-    std::cout << "Ini adalah satu" << std::endl;
-    break;
-    default:
-    std::cout << "Coba masukan nilai antara 1-5" << std::endl;
-    break;
+  std::cout << "MASUKAN OPERATOR ANDA (+, -, /, * \n" << std::endl;
+  std::cin >> aritmatika;
+  std::cout << "MASUKAN NILAI KEDUA \n \n" << std::endl;
+  std::cin >> b;
+  std::cout << a << aritmatika << b;
+  if (aritmatika == '+') {
+    hasil = a + b;
+  } else if (aritmatika == '-') {
+    hasil = a - b;
+  } else if (aritmatika == '/') {
+    hasil = a / b;
+  } else if (aritmatika == '*') {
+    hasil = a * b;
+  } else {
+    std::cout << " ANDA HANYA BISA MEMASUKAN BEBERAPA OPERATOR ( +, -, /, *) " << std::endl;
   }
+  std::cout << " = " << hasil << std::endl;
+  std::cout << " TERIMAKASIH SUDAH MEMOERCAYAI KALKULATOR KAMI 😀😀😀😀" << std::endl;
   std::cin.get();
   return 0;
 }
